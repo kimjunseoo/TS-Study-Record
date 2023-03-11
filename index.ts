@@ -1,27 +1,32 @@
-//Narrowing
-function sampleFunc(x: number | string){
-    if( typeof x === 'number'){
-        return x + 1;
-    }else {
-        return x + '1';
-    }
+type X = { x: number };
+type Y = { y: string };
+
+type BOTH = X & Y;
+
+const sample: BOTH = {
+    x : 123,
+    y : "hello"
 };
 
-function sampleFunc2(x: number | string){
-    let array: number[] = [];
-    if( typeof x === 'number'){
-        array[0] = x;
-    };
+type homework2 = { 
+    color? : string ,
+    size : number, 
+    readonly position : number[] 
 };
 
-//Assertion
-function sampleFunc3(x: number | string){
-    let array: number[] = [];
-    array[0] = x as number;
-
+type homework3 = {
+    name : string,
+    phone : number,
+    email : string,
 };
 
-//asserion 언제 쓰냐 => 비상용 / 디버깅용
+type homework4 = {
+    adult : boolean
+} & homework3 ;
 
-
-sampleFunc(123);
+let 회원가입정보 : homework4 = {
+    name : "kim",
+    phone : 22,
+    email : "a@a",
+    adult : true
+}
