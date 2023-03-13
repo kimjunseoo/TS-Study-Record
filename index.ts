@@ -1,11 +1,22 @@
-function RSP(hand : "가위" | "바위" | "보") : "가위"|"바위"|"보"[] {
-    return ;
+let 회원정보 = {
+    plusOne: function(number: number):number {
+        return number
+    },
+    changeName: function(a:any): void{
+
+    }
 };
 
-var 자료 = {
-    name : 'kim'
+type CutZeroType = (word: string) => string;
+
+const cutZero:CutZeroType = function(word){
+    let result = word.replace(/^0+/, "");
+    return result;
 };
 
-function 내함수(a : 'kim'){
+type RemoveDashType = (number: string) => number;
 
+const removeDash:RemoveDashType = function(number){
+    let result = number.replace(/-/g, "");
+    return Number(result);
 };
