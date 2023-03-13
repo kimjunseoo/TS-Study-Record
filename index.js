@@ -1,10 +1,10 @@
-var sample = {
-    x: 123,
-    y: "hello"
+function RSP(hand) {
+    return;
+}
+;
+var 자료 = {
+    name: 'kim'
 };
-var 회원가입정보 = {
-    name: "kim",
-    phone: 22,
-    email: "a@a",
-    adult: true
-};
+function 내함수(a) {
+}
+;
