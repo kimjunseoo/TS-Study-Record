@@ -1,22 +1,17 @@
-let 회원정보 = {
-    plusOne: function(number: number):number {
-        return number
-    },
-    changeName: function(a:any): void{
+class Person {
+    //필드
+    name: string;
 
+    constructor(a: string){
+        this.name = a;
     }
-};
+    //prototype 함수
+    함수(a: string){
+        console.log('안녕' + a );
+    }
+}
 
-type CutZeroType = (word: string) => string;
 
-const cutZero:CutZeroType = function(word){
-    let result = word.replace(/^0+/, "");
-    return result;
-};
-
-type RemoveDashType = (number: string) => number;
-
-const removeDash:RemoveDashType = function(number){
-    let result = number.replace(/-/g, "");
-    return Number(result);
-};
+let 사람1 = new Person('kim');
+let 사람2 = new Person('park');
+사람1.함수("hamster");

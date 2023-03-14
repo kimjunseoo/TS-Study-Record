@@ -1,15 +1,13 @@
-var 회원정보 = {
-    plusOne: function (number) {
-        return number;
-    },
-    changeName: function (a) {
+var Person = /** @class */ (function () {
+    function Person(a) {
+        this.name = a;
     }
-};
-var cutZero = function (word) {
-    var result = word.replace(/^0+/, "");
-    return result;
-};
-var removeDash = function (number) {
-    var result = number.replace(/-/g, "");
-    return Number(result);
-};
+    //prototype 함수
+    Person.prototype.함수 = function (a) {
+        console.log('안녕' + a);
+    };
+    return Person;
+}());
+var 사람1 = new Person('kim');
+var 사람2 = new Person('park');
+사람1.함수("hamster");
