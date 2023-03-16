@@ -1,19 +1,23 @@
-type Animal = { name : string };
-type Cat = { age : number } & Animal;
-// type & 키워드의 뜻은 Animal 과 Cat 둘 다 만족
-// 중복선언 불가능
-
-interface Student {
-    name : string
+//rest parameter
+function 함수(...a : number[]){
+    console.log(a)
 };
 
-interface Teacher extends Student {
-    age : number;
-};
-// 인터페이스는 복사(extends) 기능
-//중복선언 가능(두개가 합쳐짐)
-//외부라이브러리가 interface를 많이 씀. type 커스텀이 가능하기 때문.
-//다른 사람이 많이 쓸 때 interface 많이 씀.
+함수(1,2,3,4,5,6);
+//결과 : [1,2,3,4,5,6]
 
-let 학생 : Student = { name : "kim" };
-let 선생 : Teacher = { name : "kim", age : 20 };
+//spread operator
+let arr = [1,2,3];
+let arr2 = [4,5];
+let arr3 = [...arr, ...arr2];
+
+console.log(arr3);
+//결과 : [1,2,3,4,5]
+
+//destructing
+let [ 변수1, 변수2 ] = ["안녕", 100];
+
+console.log(변수1);
+//결과 : "안녕"
+
+let { student, age } = { student: true, age: 20 };

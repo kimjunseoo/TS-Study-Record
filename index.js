@@ -1,8 +1,31 @@
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+//rest parameter
+function 함수() {
+    var a = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        a[_i] = arguments[_i];
+    }
+    console.log(a);
+}
 ;
-;
-// 인터페이스는 복사(extends) 기능
-//중복선언 가능(두개가 합쳐짐)
-//외부라이브러리가 interface를 많이 씀. type 커스텀이 가능하기 때문.
-//다른 사람이 많이 쓸 때 interface 많이 씀.
-var 학생 = { name: "kim" };
-var 선생 = { name: "kim", age: 20 };
+함수(1, 2, 3, 4, 5, 6);
+//결과 : [1,2,3,4,5,6]
+//spread operator
+var arr = [1, 2, 3];
+var arr2 = [4, 5];
+var arr3 = __spreadArray(__spreadArray([], arr, true), arr2, true);
+console.log(arr3);
+//결과 : [1,2,3,4,5]
+//destructing
+var _a = ["안녕", 100], 변수1 = _a[0], 변수2 = _a[1];
+console.log(변수1);
+//결과 : "안녕"
+var _b = { student: true, age: 20 }, student = _b.student, age = _b.age;
